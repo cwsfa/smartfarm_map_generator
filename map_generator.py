@@ -62,7 +62,7 @@ def map_generator(filename):
     
     vertical_size = int((vertical_pixels * 20) + central_passage_pixels + (wall_station_distance * 2))
     horizontal_size = int(horizontal_pixels * (d-1) + (left_blank + right_blank) * 2)
-    top_crops_vertical_size = int((vertical_pixels * 10) - crops_between_central_distance + central_passage_pixels )
+    top_crops_vertical_size = int((vertical_pixels * 10) + wall_station_distance) - int(crops_between_central_distance)
     bottom_crops_vertical_size2 = int((vertical_pixels * 19) + central_passage_pixels + wall_station_distance * 2 ) - int(crops_wall_distance)
 
     img = np.zeros((vertical_size, horizontal_size, 3), np.uint8) + 255
